@@ -40,50 +40,53 @@ const PostService = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-xl font-semibold mb-4">Post a New Service</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block mb-2 font-medium">Service Title</label>
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            className="border p-2 w-full rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block mb-2 font-medium">Service Description</label>
-          <textarea
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            className="border p-2 w-full rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block mb-2 font-medium">Price</label>
-          <input
-            type="text"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-            className="border p-2 w-full rounded"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded"
-        >
-          Post Service
-        </button>
-      </form>
-    </div>
+    <div className="flex justify-center items-center">
+  <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h2 className="text-xl font-semibold mb-4 text-center">Post a New Service</h2>
+    {message && <p>{message}</p>}
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <label className="block mb-2 font-medium">Service Title</label>
+        <input
+          type="text"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          className="border p-2 w-full rounded"
+          required
+        />
+      </div>
+      <div>
+        <label className="block mb-2 font-medium">Service Description</label>
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          className="border p-2 w-full rounded"
+          required
+        />
+      </div>
+      <div>
+        <label className="block mb-2 font-medium">Price</label>
+        <input
+          type="text"
+          name="price"
+          value={formData.price}
+          onChange={handleChange}
+          className="border p-2 w-full rounded"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        className="bg-blue-500 text-white py-2 px-4 rounded"
+      >
+        Post Service
+      </button>
+    </form>
+  </div>
+</div>
+
   );
 };
 

@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { DarkMode, LightMode } from "@mui/icons-material"; // Import icons for Dark and Light mode
 import { useTheme } from "@mui/material/styles"; // Import useTheme hook
 import { useTranslation } from "react-i18next";
-import { FaHandsHelping } from "react-icons/fa";
+import { GrWorkshop } from "react-icons/gr";
 
 // Custom hook to get the first letter of a word
 const useFirstLetter = (word) => {
@@ -127,7 +127,7 @@ export default function AccountMenu() {
           }}
         >
           <ListItemIcon>
-            <FaHandsHelping fontSize="18px" />
+            <GrWorkshop fontSize="18px" />
           </ListItemIcon>
           {t("Services")}
         </MenuItem>
