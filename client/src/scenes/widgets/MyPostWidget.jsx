@@ -89,7 +89,6 @@ const MyPostWidget = ({ picturePath }) => {
     setArticleContent("");
   };
 
-
   return (
     <WidgetWrapper>
       <FlexBetween gap="1.5rem">
@@ -197,33 +196,36 @@ const MyPostWidget = ({ picturePath }) => {
             sx={{ marginBottom: "1rem" }}
           />
 
+          <p className="text-md font-semibold mb-2 text-gray-700">
+            Choose a Category:
+          </p>
           {/* Category selection buttons */}
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {/* Professional Category Button */}
             <Button
-              onClick={() => handleCategorySelect('💼Professionnel Post')}
+              onClick={() => handleCategorySelect("💼Professionnel Post")}
               sx={{
                 borderRadius: "0.5rem",
                 padding: "1rem 2rem",
                 color:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "#3ABEF9"
                     : "transparent",
                 boxShadow:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
                     : "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 "&:hover": {
                   backgroundColor:
-                    selectedCategory === '💼Professionnel Post'
+                    selectedCategory === "💼Professionnel Post"
                       ? "#3ABEF9"
                       : "transparent",
                   color:
-                    selectedCategory === '💼Professionnel Post'
+                    selectedCategory === "💼Professionnel Post"
                       ? "#fff"
                       : palette.primary.natural,
                   boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.3)",
@@ -235,7 +237,9 @@ const MyPostWidget = ({ picturePath }) => {
                   marginRight: "8px",
                   marginLeft: "8px",
                   color:
-                    selectedCategory === '💼Professionnel Post' ? "#fff" : "#3ABEF9",
+                    selectedCategory === "💼Professionnel Post"
+                      ? "#fff"
+                      : "#3ABEF9",
                   fontSize: "20px",
                 }}
               />
@@ -253,14 +257,18 @@ const MyPostWidget = ({ picturePath }) => {
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === "⚽Sport Post" ? "#3ABEF9" : "transparent",
+                  selectedCategory === "⚽Sport Post"
+                    ? "#3ABEF9"
+                    : "transparent",
                 boxShadow:
                   selectedCategory === "⚽Sport Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
                     : "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 "&:hover": {
                   backgroundColor:
-                    selectedCategory === "⚽Sport Post" ? "#3ABEF9" : "transparent",
+                    selectedCategory === "⚽Sport Post"
+                      ? "#3ABEF9"
+                      : "transparent",
                   color:
                     selectedCategory === "⚽Sport Post"
                       ? "#fff"
@@ -273,7 +281,8 @@ const MyPostWidget = ({ picturePath }) => {
                 style={{
                   marginRight: "8px",
                   marginLeft: "8px",
-                  color: selectedCategory === "⚽Sport Post" ? "#fff" : "#65B741",
+                  color:
+                    selectedCategory === "⚽Sport Post" ? "#fff" : "#65B741",
                   fontSize: "20px",
                 }}
               />
@@ -291,7 +300,9 @@ const MyPostWidget = ({ picturePath }) => {
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === "🤝Social Post" ? "#3ABEF9" : "transparent",
+                  selectedCategory === "🤝Social Post"
+                    ? "#3ABEF9"
+                    : "transparent",
                 boxShadow:
                   selectedCategory === "🤝Social Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
@@ -313,7 +324,8 @@ const MyPostWidget = ({ picturePath }) => {
                 style={{
                   marginRight: "8px",
                   marginLeft: "8px",
-                  color: selectedCategory === "🤝Social Post" ? "#fff" : "#EF5A6F",
+                  color:
+                    selectedCategory === "🤝Social Post" ? "#fff" : "#EF5A6F",
                   fontSize: "20px",
                 }}
               />
@@ -331,6 +343,7 @@ const MyPostWidget = ({ picturePath }) => {
               handlePost();
               handleClose();
             }}
+            disabled={!selectedCategory || postText.trim() === ""}
             color="primary"
             variant="contained"
           >
@@ -382,33 +395,37 @@ const MyPostWidget = ({ picturePath }) => {
             sx={{ marginBottom: "1rem" }}
           />
 
+          <p className="text-md font-semibold mb-2 text-gray-700">
+            Choose a Category:
+          </p>
+
           {/* Category selection buttons */}
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {/* Professional Category Button */}
             <Button
-              onClick={() => handleCategorySelect('💼Professionnel Post')}
+              onClick={() => handleCategorySelect("💼Professionnel Post")}
               sx={{
                 borderRadius: "0.5rem",
                 padding: "1rem 2rem",
                 color:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "#3ABEF9"
                     : "transparent",
                 boxShadow:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
                     : "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 "&:hover": {
                   backgroundColor:
-                    selectedCategory === '💼Professionnel Post'
+                    selectedCategory === "💼Professionnel Post"
                       ? "#3ABEF9"
                       : "transparent",
                   color:
-                    selectedCategory === '💼Professionnel Post'
+                    selectedCategory === "💼Professionnel Post"
                       ? "#fff"
                       : palette.primary.natural,
                   boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.3)",
@@ -420,7 +437,9 @@ const MyPostWidget = ({ picturePath }) => {
                   marginRight: "8px",
                   marginLeft: "8px",
                   color:
-                    selectedCategory === '💼Professionnel Post' ? "#fff" : "#3ABEF9",
+                    selectedCategory === "💼Professionnel Post"
+                      ? "#fff"
+                      : "#3ABEF9",
                   fontSize: "20px",
                 }}
               />
@@ -438,14 +457,18 @@ const MyPostWidget = ({ picturePath }) => {
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === "⚽Sport Post" ? "#3ABEF9" : "transparent",
+                  selectedCategory === "⚽Sport Post"
+                    ? "#3ABEF9"
+                    : "transparent",
                 boxShadow:
                   selectedCategory === "⚽Sport Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
                     : "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 "&:hover": {
                   backgroundColor:
-                    selectedCategory === "⚽Sport Post" ? "#3ABEF9" : "transparent",
+                    selectedCategory === "⚽Sport Post"
+                      ? "#3ABEF9"
+                      : "transparent",
                   color:
                     selectedCategory === "⚽Sport Post"
                       ? "#fff"
@@ -458,7 +481,8 @@ const MyPostWidget = ({ picturePath }) => {
                 style={{
                   marginRight: "8px",
                   marginLeft: "8px",
-                  color: selectedCategory === "⚽Sport Post" ? "#fff" : "#65B741",
+                  color:
+                    selectedCategory === "⚽Sport Post" ? "#fff" : "#65B741",
                   fontSize: "20px",
                 }}
               />
@@ -476,7 +500,9 @@ const MyPostWidget = ({ picturePath }) => {
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === "🤝Social Post" ? "#3ABEF9" : "transparent",
+                  selectedCategory === "🤝Social Post"
+                    ? "#3ABEF9"
+                    : "transparent",
                 boxShadow:
                   selectedCategory === "🤝Social Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
@@ -498,7 +524,8 @@ const MyPostWidget = ({ picturePath }) => {
                 style={{
                   marginRight: "8px",
                   marginLeft: "8px",
-                  color: selectedCategory === "🤝Social Post" ? "#fff" : "#EF5A6F",
+                  color:
+                    selectedCategory === "🤝Social Post" ? "#fff" : "#EF5A6F",
                   fontSize: "20px",
                 }}
               />
@@ -515,6 +542,7 @@ const MyPostWidget = ({ picturePath }) => {
               handlePost();
               handleMediaDialogClose();
             }}
+            disabled={!selectedCategory || postText.trim() === "" || !selectedFile}
             color="primary"
             variant="contained"
           >
@@ -546,33 +574,38 @@ const MyPostWidget = ({ picturePath }) => {
             placeholder={t("Write your article content here...")}
             style={{ height: "300px", marginBottom: "4rem" }}
           />
+
+          <p className="text-md font-semibold mb-2 text-gray-700">
+            Choose a Category:
+          </p>
+
           {/* Category selection buttons */}
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {/* Professional Category Button */}
             <Button
-              onClick={() => handleCategorySelect('💼Professionnel Post')}
+              onClick={() => handleCategorySelect("💼Professionnel Post")}
               sx={{
                 borderRadius: "0.5rem",
                 padding: "1rem 2rem",
                 color:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "#3ABEF9"
                     : "transparent",
                 boxShadow:
-                  selectedCategory === '💼Professionnel Post'
+                  selectedCategory === "💼Professionnel Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
                     : "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 "&:hover": {
                   backgroundColor:
-                    selectedCategory === '💼Professionnel Post'
+                    selectedCategory === "💼Professionnel Post"
                       ? "#3ABEF9"
                       : "transparent",
                   color:
-                    selectedCategory === '💼Professionnel Post'
+                    selectedCategory === "💼Professionnel Post"
                       ? "#fff"
                       : palette.primary.natural,
                   boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.3)",
@@ -584,7 +617,9 @@ const MyPostWidget = ({ picturePath }) => {
                   marginRight: "8px",
                   marginLeft: "8px",
                   color:
-                    selectedCategory === '💼Professionnel Post' ? "#fff" : "#3ABEF9",
+                    selectedCategory === "💼Professionnel Post"
+                      ? "#fff"
+                      : "#3ABEF9",
                   fontSize: "20px",
                 }}
               />
@@ -602,14 +637,18 @@ const MyPostWidget = ({ picturePath }) => {
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === "⚽Sport Post" ? "#3ABEF9" : "transparent",
+                  selectedCategory === "⚽Sport Post"
+                    ? "#3ABEF9"
+                    : "transparent",
                 boxShadow:
                   selectedCategory === "⚽Sport Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
                     : "0px 4px 10px rgba(0, 0, 0, 0.2)",
                 "&:hover": {
                   backgroundColor:
-                    selectedCategory === "⚽Sport Post" ? "#3ABEF9" : "transparent",
+                    selectedCategory === "⚽Sport Post"
+                      ? "#3ABEF9"
+                      : "transparent",
                   color:
                     selectedCategory === "⚽Sport Post"
                       ? "#fff"
@@ -622,7 +661,8 @@ const MyPostWidget = ({ picturePath }) => {
                 style={{
                   marginRight: "8px",
                   marginLeft: "8px",
-                  color: selectedCategory === "⚽Sport Post" ? "#fff" : "#65B741",
+                  color:
+                    selectedCategory === "⚽Sport Post" ? "#fff" : "#65B741",
                   fontSize: "20px",
                 }}
               />
@@ -640,7 +680,9 @@ const MyPostWidget = ({ picturePath }) => {
                     ? "#fff"
                     : palette.primary.natural,
                 backgroundColor:
-                  selectedCategory === "🤝Social Post" ? "#3ABEF9" : "transparent",
+                  selectedCategory === "🤝Social Post"
+                    ? "#3ABEF9"
+                    : "transparent",
                 boxShadow:
                   selectedCategory === "🤝Social Post"
                     ? "0px 6px 12px rgba(58, 190, 249, 0.4)"
@@ -662,7 +704,8 @@ const MyPostWidget = ({ picturePath }) => {
                 style={{
                   marginRight: "8px",
                   marginLeft: "8px",
-                  color: selectedCategory === "🤝Social Post" ? "#fff" : "#EF5A6F",
+                  color:
+                    selectedCategory === "🤝Social Post" ? "#fff" : "#EF5A6F",
                   fontSize: "20px",
                 }}
               />
@@ -679,6 +722,7 @@ const MyPostWidget = ({ picturePath }) => {
               handlePost();
               handleCloseArticle();
             }}
+            disabled={articleTitle.trim() === "" || articleContent.trim() === "" || !selectedCategory}
             color="primary"
             variant="contained"
           >
