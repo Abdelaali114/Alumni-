@@ -103,7 +103,7 @@ const Form = () => {
 
         
         navigate("/home");
-        toast.success("Password updated successfully!");
+
       } else {
         toast.error("Login failed. Please try again.");
       }
