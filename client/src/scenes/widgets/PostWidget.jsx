@@ -36,6 +36,8 @@ const PostWidget = ({
   name,
   description,
   posttype,
+  articleContent,
+  articleTitle,
   location,
   picturePath,
   userPicturePath,
@@ -49,8 +51,7 @@ const PostWidget = ({
   const token = useSelector((state) => state.token);
   const loggedInUserId = useSelector((state) => state.user._id);
   const loggedInUser = useSelector((state) => state.user);
-  const [likeCount, setLikeCount] = useState(Object.keys(likes).length);
-
+  const [likeCount, setLikeCount] = useState(likes ? Object.keys(likes).length : 0);
   const { palette } = useTheme();
   const main = palette.neutral.main;
 
@@ -90,7 +91,8 @@ const PostWidget = ({
   });
   const updatedPost = await response.json();
   dispatch(setPost({ post: updatedPost }));
-  setLikeCount(updatedPost.likes.length);
+  setLikeCount(updatedPost.likes ? Object.keys(updatedPost.likes).length : 0);
+
 };
 
 const patchUnlike = async () => {
@@ -104,7 +106,8 @@ const patchUnlike = async () => {
   });
   const updatedPost = await response.json();
   dispatch(setPost({ post: updatedPost }));
-  setLikeCount(updatedPost.likes.length);
+  setLikeCount(updatedPost.likes ? Object.keys(updatedPost.likes).length : 0);
+
 };
 
 
@@ -155,6 +158,37 @@ const handleReact = async (reaction) => {
       <Typography color={main} sx={{ mt: "1rem" }}>
         {description}
       </Typography>
+      {articleTitle && (
+        <div
+          style={{
+            backgroundColor: "#fff",
+            padding: "1.5rem",
+            borderRadius: "8px",
+            boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+            marginBottom: "2rem",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1.75rem",
+              color: "#333",
+              marginBottom: "0.75rem",
+              fontWeight: 600,
+            }}
+          >
+            {articleTitle}
+          </h2>
+          <div
+            style={{
+              fontSize: "1.1rem",
+              color: "#555",
+              lineHeight: "1.75",
+              marginBottom: "1.5rem",
+            }}
+            dangerouslySetInnerHTML={{ __html: articleContent }}
+          />
+        </div>
+      )}
       {picturePath && (
         <img
           width="100%"

@@ -19,6 +19,7 @@ import searchRoutes from "./routes/search.js";
 import updateLinks from "./routes/updateLinks.js";
 import notificationRoutes from "./routes/notification.js";
 import jobPostRoutes from "./routes/jobPostRoutes.js";
+import serviceRoutes from "./routes/service.js";
 import feedbackRoutes from "./routes/feedback.js";
 import wrongfeedbackRoutes from "./routes/wrongfeedback.js";
 import { register } from "./controllers/auth.js";
@@ -196,6 +197,7 @@ app.use("/search", searchRoutes);
 app.use("/api", updateLinks);
 app.use("/notifications", notificationRoutes);
 app.use("/api", jobPostRoutes);
+app.use("/services", serviceRoutes);
 
 
 
