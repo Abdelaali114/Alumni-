@@ -53,7 +53,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
-    credentials: true, // Enable credentials
+    credentials: true,
   })
 );
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
@@ -180,7 +180,7 @@ app.post('/changepassword/pass', async (req, res) => {
 
 
 /*ROUTES WITH FILES */
-app.post("/auth/register", upload.single("picture"), register); // we we add new picture to our project
+app.post("/auth/register", upload.single("picture"), register); 
 app.post("/posts", verifyToken, upload.single("picture"), createPost);
 app.put("/users/:id", verifyToken, upload.single("picture"), updateUserProfile);
 
